@@ -1,0 +1,1217 @@
+/* GENERAL */
+
+:root {
+    --primary-bg: #6725A8;
+    --primary-accent: #CB11AB;
+    --primary-orange: #F55123;
+    --primary-bg-card: #F6F6FA;
+    --primary-color-free: #0CB477;
+    --primary-warning: #FF3B30;
+}
+
+* {
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+body {
+    background-color: var(--primary-bg);
+}
+
+/* HEADER */
+
+header {
+    padding: 16px 24px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    gap: 10px;
+}
+
+.header-logo {
+    display: flex;
+    align-items: stretch;
+    gap: 16px;
+    width: 179px;
+}
+
+.header-catalog {
+    cursor: pointer;
+    padding: 5px;
+    min-width: 48px;
+    height: 48px;
+    border: 1px solid rgb(255, 255, 255, 0.5);
+    border-radius: 17%;
+    background-image: url('/img/Vector.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 28px;
+}
+
+.header-text-logo {
+    font-size: 22px;
+    font-weight: 600;
+    text-transform: uppercase;
+    color: white;
+    margin: 0;
+}
+
+.search-box {
+    position: relative;
+    width: 100%;
+    max-width: 990px;
+    height: 48px;
+}
+
+.search {
+    height:100%;
+    width: 100%;
+    color: rgb(255, 255, 255, 0.5);
+    font-size: 18px;
+    border: none;
+    border-radius: 30px;
+    background-color: rgb(255, 255, 255, 0.5);
+}
+
+.search::placeholder {
+    color: rgb(255, 255, 255, 0.5);
+    font-size: 18px;
+    padding: 20px;
+}
+
+.search-icon {
+    cursor: pointer;
+    position: absolute;
+    display: inline-block;
+    right: 15px;
+    top: 8px;
+    width: 28px;
+    height: 28px;
+}
+
+.menu {
+    display: flex;
+    gap: 40px;
+    align-items: center;
+}
+
+.menu-link {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 8px;
+    color: white;
+    text-decoration: none;
+    font-size: 13px;
+}
+
+.menu-icon {
+    position: relative;
+    height: 23px;
+}
+
+/*MAIN*/
+
+.menu-icon .count {
+    top: -5px;
+    right: -8px;
+}
+
+.count {
+    display: none;
+    position: absolute;
+    right: 0;
+    top: -2px;
+    background-color: var(--primary-orange);
+    border-radius: 8px;
+    color: white;
+    padding: 0 4px;
+    font-size: 13px;
+}
+
+.isDisplayCount {
+    display: block;
+}
+
+main {
+    display: flex;
+    justify-content: space-between;
+    align-items: start;
+    width: 100%;
+    background-color: var(--primary-bg-card);
+    border-radius: 20px;
+    padding: 20px;
+    gap: 32px;
+}
+
+.main-corzina {
+    width: 100%;
+    padding: 20px 5px 20px 5px;
+}
+
+.haveCor {
+    margin-bottom: 40px;
+}
+
+.mainH1 {
+    font-size: 28px;
+    font-weight: 700;
+    margin-bottom: 30px;
+}
+
+.checkProduct {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 16px;
+}
+
+.products, .notProducts {
+    border-top: 1px solid rgb(128, 128, 128, 0.1);
+    padding-top: 12px;
+}
+
+.product {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    margin-bottom: 30px;
+}
+
+.imgProduct,.notImgProd {
+    width: 72px;
+    height: 96px;
+}
+
+.nameProd {
+    font-size: 16px;
+    font-weight: 400;
+}
+
+.descCard,.interInfo {
+    display: flex;
+    gap: 16px;
+}
+
+.mobileSize {
+    display: none;
+}
+
+.description {
+    width: 400px;
+}
+
+.description>.nameProd,.infoMaterial,.brand {
+    margin-bottom: 8px;
+}
+
+.infoMaterial,.brand {
+    font-size: 13px;
+}
+
+.infoMaterial {
+    display: flex;
+    gap: 16px;
+}
+
+.brand {
+    color: #9797AF;
+}
+
+.brand:last-child {
+    position: relative;
+}
+
+.branAbout {
+    position: relative;
+    display: flex;
+    align-items: flex-start;
+    gap: 6px;
+}
+
+.infoBrand {
+    cursor: pointer;
+}
+
+.displayInfoBrand {
+    display: none;
+}
+
+.aboutBrand {
+    position: absolute;
+    top: 20px;
+    width: 300px;
+    height: 104px;
+    padding: 10px 20px;
+    border-radius: 8px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    background-color: white;
+}
+
+.aboutBrand>.nameBrand,p {
+    margin-bottom: 8px;
+}
+
+.aboutBrand>p {
+    font-size: 13px;
+}
+
+.aboutBrand>p:last-child {
+    margin-bottom: 0;
+}
+
+.nameBrand {
+    font-size: 13px;
+}
+
+.discontHover {
+    position: absolute;
+    right: 0;
+    width: 250px;
+    padding: 11px 16px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    font-size: 13px;
+    z-index: 1000;
+}
+
+.discontRow {
+    display: flex;
+    justify-content: space-between;
+}
+
+.discGray {
+    color: #9797AF;
+}
+
+.counter {
+    display: flex;
+    height: 44px;
+    margin-bottom: 8px;
+}
+
+.kolvoProd,.minus,.plus {
+    background-color: white;
+    border: none;
+}
+
+.kolvoProd {
+    width: 30px;
+    text-align: center;
+    font-size: 16px;
+}
+
+.minus, .plus {
+    cursor: pointer;
+    width: 30px;
+    text-align: center;
+    font-size: 16px;
+}
+
+.minus {
+    border-radius: 8px 0 0 8px;
+}
+
+.plus {
+    border-radius: 0 8px 8px 0;
+}
+
+.ostatock {
+    font-size: 13px;
+    color: var(--primary-warning);
+    margin-bottom: 8px;
+}
+
+.interInfo:last-child {
+    text-align: end;
+}
+
+.cenaMobile {
+    display: none;
+}
+
+.cenaCard{
+    width: 110px;
+}
+
+.cenaMobile>p:first-child, .cenaCard>p:first-child {
+    font-size: 16px;
+    font-weight: 700;
+}
+
+.cenaMobile>p:nth-child(2), .cenaCard>p:nth-child(2) {
+    position: relative;
+    font-size: 13px;
+    color: #9797AF;
+    text-decoration: line-through solid #9797AF;
+}
+
+.notProduct {
+    display: flex;
+    justify-content: space-between;
+    width: 86%;
+    margin-bottom: 20px;
+}
+
+.notProduct>div:first-child {
+    display: flex;
+}
+
+.notImgProd {
+    margin-right: 16px;
+    filter: grayscale(100%);
+}
+
+.notInfoMaterial,.notNameProd {
+    color: #9797AF;
+}
+
+.notNameProd {
+    font-size: 16px;
+    font-weight: 400;
+    margin-bottom: 8px;
+}
+
+.notInfoMaterial {
+    display: flex;
+    gap: 16px;
+    font-size: 13px;
+}
+
+.deliveryWay {
+    padding: 16px 24px 24px 24px;
+    background-color: white;
+    width: 100%;
+    border-radius: 20px;
+    margin-bottom: 16px;
+}
+
+.deliveryTable {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 24px;
+}
+
+.rowDelivery {
+    display: flex;
+    margin-bottom: 16px;
+    gap: 32px;
+}
+
+.mainMass {
+    font-size: 16px;
+    font-weight: 700;
+    width: 177px;
+}
+
+.secondMass {
+    font-size: 16px;
+    font-weight: 400;
+}
+
+.ocenkaPlace {
+    margin-top: 4px;
+    position: relative;
+    display: flex;
+    gap: 8px;
+    font-size: 13px;
+    padding-left: 15px;
+}
+
+.ocenkaPlace::before {
+    position: absolute;
+    left: 0;
+    content: url('./img/star.svg');
+}
+
+.delivaryImg {
+    width: 50px;
+}
+
+.kolvoDeliveryImg {
+    position: relative;
+}
+
+.kolvoDeliveryImg .count {
+    top: -5px;
+    right: -4px;
+}
+
+.flexImg {
+    display: flex;
+    gap: 8px;
+}
+
+.infoDosDelivery {
+    position: relative;
+    font-size: 13px;
+    padding-left: 30px;
+}
+
+.infoDosDelivery::before {
+    position: absolute;
+    content: url('./img/check.svg');
+    left: 0;
+    top: -4px;
+}
+
+.payWay {
+    padding: 16px 24px 24px 24px;
+    background-color: white;
+    width: 100%;
+    border-radius: 20px;
+    margin-bottom: 16px;
+}
+
+.headPayWay {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 16px;
+}
+
+.head {
+    font-size: 24px;
+}
+
+.btnPayWay {
+    cursor: pointer;
+    border: none;
+    background-color: transparent;
+    color: var(--primary-accent);
+    font-size: 16px;
+    font-weight: 700;
+}
+
+.payment {
+    display: flex;
+    align-items: center;
+    position: relative;
+    display: flex;
+    gap: 12px;
+    margin-bottom: 8px;
+}
+
+.payment>p {
+    height: 10px;
+}
+
+.warningPayWay {
+    font-size: 13px;
+    color: #9797AF;
+}
+
+.infoCustomer {
+    padding: 16px 24px 40px 24px;
+    background-color: white;
+    width: 100%;
+    border-radius: 20px;
+    margin-bottom: 16px;
+}
+
+.infoCustomer>.head {
+    margin-bottom: 16px;
+}
+
+.contactCustomer,.nameCustomer {
+    display: flex;
+    gap: 24px;
+    margin-top: 20px;
+}
+
+.labelInput {
+    position: absolute;
+    top: -10px;
+    display: none;
+    font-size: 13px;
+    color:#9797AF;
+}
+
+.isDisplay {
+    display: inline-block;
+    font-size: 13px;
+    color:#9797AF;
+}
+
+.inputCustomer {
+    background-color: transparent;
+    border: none;
+    border-bottom: 1px solid #9797AF;
+    padding: 5px;
+    width: 250px;
+}
+
+.inputCustomer:focus {
+    outline: none;
+}
+
+.inputCustomer::placeholder {
+    color: #9797AF;
+}
+
+.inputCustomer:focus::-webkit-input-placeholder {color: transparent}
+.inputCustomer:focus::-moz-placeholder          {color: transparent}
+.inputCustomer:focus:-moz-placeholder           {color: transparent}
+.inputCustomer:focus:-ms-input-placeholder      {color: transparent}
+
+.large {
+    width: 300px;
+}
+
+.input {
+    position: relative;
+}
+
+.INNInfo {
+    position: absolute;
+    left: 0;
+    bottom: -20px;
+    font-size: 13px;
+}
+
+.itog {
+    border-radius: 20px;
+    max-width: 429px;
+    padding: 18px 24px;
+    background-color: white;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+.itogTable {
+    width: 100%;
+    border-spacing: 0 3px;
+}
+
+.cena {
+    margin-bottom: 30px;
+}
+
+.tHead>td {
+    font-size: 28px;
+    font-weight: 700;
+}
+
+.tHead>td:last-child {
+    font-size: 24px;
+    font-weight: 700;
+}
+
+.itogTable>tr>td {
+    font-size: 16px;
+}
+
+.itogRow2 {
+    text-align: right;
+}
+
+.dHead {
+    margin-bottom: 10px;
+}
+
+.adress {
+    margin-bottom: 5px;
+}
+
+.dostavka {
+    margin-bottom: 30px;
+}
+
+.dostavka>div {
+    display: flex;
+    align-items: start;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+.btn {
+    padding: 0;
+    cursor: pointer;
+    background-color: transparent;
+    border: none;
+}
+
+.dHead {
+    font-size: 16px;
+    font-weight: 700;
+}
+
+.adress {
+    font-size: 13px;
+}
+
+.linkSroc {
+    font-size: 13px;
+    color: var(--primary-accent);
+    text-decoration: underline dotted var(--primary-accent);
+}
+
+.infoDos {
+    display: flex;
+    align-items: baseline;
+    width: 100%;
+    background-color: var(--primary-bg-card);
+    border-radius: 8px;
+    padding: 13px 13px 13px 10px;
+    gap: 8px;
+    margin-bottom: 16px;
+}
+
+.infoDos>p {
+    font-size: 13px;
+    align-self: stretch;
+}
+
+.freeInfo {
+    position: relative;
+    cursor: pointer;
+    color: var(--primary-color-free);
+    text-decoration: underline dotted var(--primary-color-free);
+}
+
+.freeInfo:hover::after {
+    content: 'Если товары вам не подойдут, мы вернем их обратно на склад — это бесплатно';
+    color: black;
+    font-size: 13px;
+    position: absolute;
+    left: -100px;
+    top: 20px;
+    width: 270px;
+    height: 32px;
+    padding: 10px 16px 14px;
+    background-color: white;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    border-radius: 8px;
+}
+
+.oplata {
+    margin-bottom: 23px;
+}
+
+.oplata:first-child>p {
+    font-size: 16px;
+    font-weight: 700;
+}
+
+.oplata>div {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 8px;
+}
+
+.numberPayCard {
+    gap: 8px;
+    display: flex;
+    align-items: center;
+    height: 10px;
+    position: relative;
+    font-size: 13px;
+    margin-bottom: 15px;
+}
+
+.payMoment {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    background-color: var(--primary-bg-card);
+    border-radius: 8px;
+    padding: 14px 14px 14px 10px;
+    font-size: 13px;
+    margin-bottom: 16px;
+}
+
+#payCheck {
+    display: inline-flex;
+    align-items: center;
+    user-select: none;
+    margin-right: 15px;
+    margin-bottom: 15px;
+}
+
+#payCheck::before {
+    content: '';
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    flex-shrink: 0;
+    flex-grow: 0;
+    border: 1px solid #adb5bd;
+    border-radius: 30%;
+    margin-right: 0.5em;
+    background-color: var(--primary-bg-card);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: 50% 50%;
+}
+
+#payCheck:checked::before {
+    border-color: var(--primary-accent);
+    background-color: var(--primary-accent);
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 8 8'%3e%3cpath fill='%23fff' d='M6.564.75l-3.59 3.612-1.538-1.55L0 4.26 2.974 7.25 8 2.193z'/%3e%3c/svg%3e");
+}
+
+.btnOrder {
+    cursor: pointer;
+    width: 100%;
+    font-size: 16px;
+    font-weight: 700;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    background-color: var(--primary-accent);
+    padding: 13px 0;
+    margin-bottom: 14px;
+}
+
+.agreement {
+    width: 80%;
+    position: relative;
+    font-size: 13px;
+    margin-left:20px;
+}
+
+.agreement::before {
+    position: absolute;
+    left: -20px;
+    content: url('./img/blackCkeck.svg');
+    width: 13px;
+    height: 13px;
+}
+
+.agreement>a {
+    color: black;
+    text-decoration: underline solid var(--primary-bg-card) 2px;
+}
+
+.popupPay,.popupDelivery {
+    width:100%;
+    min-height:100%;
+    background: rgba(5, 0, 10, 0.30);
+    overflow:hidden;
+    position:fixed;
+    top:0px;
+    left: 0;
+    display: none;
+    justify-content: center;
+    align-items: center;
+}
+
+.popupPayContent,.popupDeliveryContent {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: start;
+    background-color: white;
+    border-radius: 16px;
+    padding: 16px 22px;
+    width: 400px;
+    height: 408px;
+}
+
+.popupPayContent div,.popupDeliveryContent div {
+    width: 100%;
+}
+
+.headPopup {
+    padding: 0 0 0 2px;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 13px;
+}
+
+.headPopupText {
+    font-size: 20px;
+}
+
+.closePopup {
+    cursor: pointer;
+    border: none;
+    background-color: transparent;
+}
+
+.isDisplayPopup {
+    display: flex;
+}
+
+.popupPayCard {
+    position: relative;
+    margin-bottom: 16px;
+}
+
+.popupPayCard label {
+    margin-left: 70px;
+}
+
+.visa::before ,.mastercard::before ,.maestro::before ,.mir::before {
+    content: url('/img/mir.svg');
+    position: absolute;
+    top: -3px;
+    left: 30px;
+}
+
+.visa::before {
+    content: url('/img/visa.svg');
+}
+
+.mastercard::before {
+    content: url('/img/mastercard.svg');
+}
+
+.maestro::before {
+    content: url('/img/maestro.svg');
+}
+
+.popupBtn {
+    cursor: pointer;
+    color: white;
+    font-weight: 700;
+    border: none;
+    padding: 15px 48px;
+    border-radius: 8px;
+    background-color: var(--primary-accent);
+    margin-left: 2px;
+}
+  
+.popupPayCard input,.popupAdressCard input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+}
+  
+.checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 20px;
+    width: 20px;
+    background-color: transparent;
+    border: 1px solid #9797AF;
+    border-radius: 50%;
+} 
+  
+.popupPayCard input:checked ~ .checkmark,.popupAdressCard input:checked ~ .checkmark {
+    background-color: var(--primary-accent);
+    border: none;
+}  
+
+.checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+
+.popupPayCard input:checked ~ .checkmark:after,.popupAdressCard input:checked ~ .checkmark:after {
+    display: block;
+}  
+
+.popupPayCard .checkmark:after,.popupAdressCard .checkmark:after {
+    transform-origin: 50% 50% 0;
+    top: 29%;
+    left: 29%;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: white;
+}
+
+.popupDeliveryContent {
+    width: 500px;
+}
+
+.popupChooseDelivery {
+    display: flex;
+    gap: 8px;
+    margin-bottom: 24px;
+}
+
+.popupBtnChoose {
+    cursor: pointer;
+    width: 100%;
+    border: 2px solid var(--primary-accent);
+    border-radius: 20px;
+    background-color: transparent;
+    font-weight: 700;
+    font-size: 13px;
+    padding: 8px 0;
+}
+
+.popupAdressHead {
+    font-size: 13px;
+    font-weight: 700;
+}
+
+.popupAdressCard {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.popupAdressCard label {
+    padding-left: 30px;
+    width: 400px;
+}
+
+.popupDeliveryDel {
+    cursor: pointer;
+    border: none;
+    background-color: transparent;
+}
+
+#ocenkaPlacePopup {
+    display: none;
+}
+
+.delCorzina img:hover {
+    content: url('./img/hoverCorzina.svg');
+}
+
+.hoverHeart img:hover {
+    content: url('./img/hoverHeart.svg');
+}
+
+/* FOOTER */
+
+footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 64px;
+}
+
+.footer-text {
+    color: rgb(255, 255, 255, 0.7);
+    font-size: 13px;
+}
+
+.mobileMenu {
+    display: none;
+}
+
+.Error {
+    display: inline;
+    position: absolute;
+    left: 0;
+    bottom: -20px;
+    font-size: 13px;
+    color: var(--primary-orange);
+}
+
+.notDisplayError {
+    display: none;
+}
+
+.rotate {
+    transform: rotate(180deg);
+}
+
+/*MOBILE*/
+
+@media screen and (max-width: 375px) {
+
+    /* HEADER MOBILE*/
+
+    header {
+        padding: 0;
+    }
+
+    .header-logo {
+        flex-grow: 1;
+        align-items: center;
+        gap: 32px;
+    }
+
+    .header-catalog {
+        border: none;
+        background-image: url('./mobileImg/mobileHeaderCatalog.svg');
+    }
+
+    .search-box {
+        width: 20px;
+    }
+
+    .search-box input {
+        display: none;
+    }
+
+    .search-box img {
+        content: url('./mobileImg/searchIcon.svg');
+    }
+
+    .menu {
+        display: none;
+    }
+
+    /*MAIN*/
+
+    main {
+        padding: 0;
+        flex-direction: column;
+        gap: 0;
+    }
+
+    .main-corzina .mainH1,.haveCor,.dontHaveCor,.itog {
+        margin: 16px;
+    }
+
+    .mainH1 {
+        font-size: 20px;
+    }
+
+    .main-corzina {
+        padding: 0;
+    }
+
+    .product {
+        flex-direction: column;
+    }
+
+    .cenaCard {
+        display: none;
+    }
+
+    .cenaMobile {
+        display: flex;
+    }
+
+    .description {
+        width: 100%;
+    }
+
+    .interInfo {
+        width: 100%;
+    }
+
+    .interInfo>div:first-child {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .descCard {
+        position: relative;
+    }
+
+    .descCard>#payCheck {
+        position: absolute;
+        top: 5px;
+        left: 1px;
+    }
+
+    .mobileSize {
+        position: absolute;
+        bottom: 9px;
+        left: 1px;
+        display: block;
+        font-size: 14px;
+        height: 20px;
+        padding: 2px;
+        border-radius: 6px;
+        background-color: white;
+    }
+
+    .notProduct {
+        width: 100%;
+        flex-direction: column;
+    }
+
+    .notProduct>div:last-child {
+        align-self: end;
+    }
+
+    .rowDelivery {
+        flex-direction: column;
+        gap: 5px;
+        margin-bottom: 16px;
+    }
+
+    .head {
+        font-size: 20px;
+    }
+
+    .nameCustomer, .contactCustomer {
+        flex-direction: column;
+    }
+
+    .inputCustomer {
+        width: 100%;
+    }
+
+    .itog {
+        padding: 0;
+        background-color: transparent;
+        box-shadow: none;
+    }
+
+    .infoDos,.payMoment {
+        background-color: #F0ECF4;
+    }
+
+    .itog .dostavka,.oplata {
+        display: none;
+    }
+
+    .infoCustomer,.payWay,.deliveryWay {
+        padding: 16px 16px;
+    }
+
+    .infoCustomer {
+        padding-bottom: 40px;
+    }
+
+    .popupPayContent,.popupDeliveryContent {
+        width: 100%;
+        height: 100vh;
+        border-radius: 0;
+    }
+
+    .popupBtn {
+        align-self: normal;
+    }
+
+    .popupAdressCard {
+        margin-bottom: 0;
+    }
+
+    #ocenkaPlacePopup {
+        display: flex;
+    }
+
+    #ocenkaPlacePopup {
+        margin-left: 30px;
+        margin-bottom: 20px;
+    }
+
+    #ocenkaPlacePopup p:last-child {
+        color: #A0A0A4;
+    }
+
+    footer {
+        margin-bottom: 50px;
+    }
+
+    .mobileMenu {
+        width: 100%;
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        display: flex;
+        justify-content: space-around;
+        background-color: white;
+        padding: 13px;
+    }
+
+    .mobileMenuBtn {
+        position: relative;
+        background-color: transparent;
+        border: none;
+    }
+
+    .closeWhenPopup {
+        display: none;
+    }
+
+}
